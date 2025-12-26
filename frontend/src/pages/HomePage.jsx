@@ -20,7 +20,7 @@ const HomePage = () => {
         issetRateLimited(false);
       } catch (error) {
         console.log("Error fetching notes");
-        if (error.response.status === 429) {
+        if (error.response?.status === 429) {
           issetRateLimited(true);
         } else {
           toast.error("Failed to load notes");
